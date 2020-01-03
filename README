@@ -1,0 +1,32 @@
+Serban Andra, 321CA
+
+
+Structura temei:
+	In aceasta etapa am adaugat urmatoarele clase:
+
+		-angels: cuprinde clasa abstracta Angel si clasele care implementeaza 
+		fiecare inger; pentru crearea fiecarui inger am folosit clasa AngelFactory
+
+		-dessign pattern-uri:
+			-Observer: 
+				-cuprinde clasa GreatMagician, in implemenatrea careia am folosit 
+				pattern-ul Singleton. Pentru modelarea pattern-ului Observer am 
+				folosit doua interfete (Observer, Subject).
+				-interfata Observer este implementata de clasa GreatMagician. 
+				Aceasta contine o functie de update ce este apelata cand se produce 
+				o schimbare.
+				-interfata Subject este implementata de clasa Player si clasa Angel.
+				 Aceasta contine metode pentru adaugarea, stergerea si notificarea 
+				 unui Observer.
+
+			-Strategy: 
+				-pentru fiecare jucator am construit doua clasa ce reprezinta 
+				strategiile lor respectiv Offensive si Defensive, implementatand 
+				interfata Strategy
+
+			-Visitor:
+				-pentru implementarea acestui dessign pattern am construit doua 
+				interfete: Visitor(implementata de clasa Angel) si Visitable(
+				implementata de clasa Player). Astfel de fiecare data cand un inger 
+				este spawnat pe harta, functia accept() din Visitable este apelata, 
+				iar mai apoi functia visit din Visitor.
